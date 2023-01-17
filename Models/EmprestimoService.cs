@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Biblioteca.Models
 {
@@ -30,11 +31,44 @@ namespace Biblioteca.Models
             }
         }
 
-        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro)
+
+        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro = null)
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
-                return bc.Emprestimos.Include(e => e.Livro).ToList();
+                IQueryable<Emprestimo> query;
+                
+       
+
+                if(filtro != null)
+                {
+                   
+                    
+                    //definindo dinamicamente a filtragem
+                    switch(filtro.TipoFiltro)
+                    {
+                        case "Usuario":
+                            query = bc.Emprestimos.Where(l => l.NomeUsuario.Contains(filtro.Filtro));
+                        break;
+
+                        case "Livro":
+                            query = bc.Emprestimos.Where(l => l.Livro.Titulo.Contains(filtro.Filtro));
+                        break;
+
+                        default:
+                            query = bc.Emprestimos;
+                        break;
+                    }
+                }
+                else
+                {
+                    // caso filtro não tenha sido informado
+                    query = bc.Emprestimos;
+                }
+                
+                Console.WriteLine(query);
+                //ordenação padrão
+                return query.Include(e => e.Livro).OrderBy(e => e.DataDevolucao).ToList();
             }
         }
 

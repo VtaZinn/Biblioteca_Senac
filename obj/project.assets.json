@@ -5466,19 +5466,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dj-Vta\\.nuget\\packages\\": {}
+    "C:\\Users\\Dj Vta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\programação\\biblioteca\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\Dj Vta\\Desktop\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "D:\\programação\\biblioteca\\Biblioteca\\Biblioteca.csproj",
-      "packagesPath": "C:\\Users\\Dj-Vta\\.nuget\\packages\\",
-      "outputPath": "D:\\programação\\biblioteca\\Biblioteca\\obj\\",
+      "projectPath": "C:\\Users\\Dj Vta\\Desktop\\Biblioteca\\Biblioteca.csproj",
+      "packagesPath": "C:\\Users\\Dj Vta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dj Vta\\Desktop\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dj-Vta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Dj Vta\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5539,7 +5539,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.425\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
       }
     }
   }
